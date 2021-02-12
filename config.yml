@@ -3,10 +3,13 @@ description: ψ
 template:
   repo: ps-template
   name: ps
+  description: ψ
 before:
   - type: createIssue
     title: Welcome!
     body: new-issue.md
+  - type: createFile
+  - type: createPullRequest
 steps:
   - title: First step
     description: The first step in your course
@@ -14,3 +17,13 @@ steps:
     link: '{{ repoUrl }}'
     actions:
       - type: closeIssue
+  - title: New step
+    actions:
+      - type: createIssue
+        title: A new issue
+        body: a-response-file.md
+  - title: New step
+    actions:
+      - type: createIssue
+        title: A new issue
+        body: a-response-file.md
